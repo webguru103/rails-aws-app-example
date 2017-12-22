@@ -1,0 +1,27 @@
+<h1>Cow Inventory</h1>
+<h2>Here are all my cows</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Breed</th>
+      <th>Age</th>
+    </tr>
+        
+  <% @cows.each do |cow| %>
+  <tr>
+    <td><%= cow.name %></td>
+    <td><%= cow.breed %></td>
+    <td class="numeric"><%= cow.age_in_years %></td>
+  </tr>
+  <% end %>
+  </table>
+  <div class="host_info">
+  The machine I'm running on reports its name as  <%= @hostname %> 
+  </div>
+  <div class="host_info">
+  The request I'm responding to specified  <%= @request_host %>  as host name
+  </div>
+  <div class="host_info">
+  My database connnection adapter:  <%= @db_info  %>
+  </div>
+This is a note to see what happens on changes
